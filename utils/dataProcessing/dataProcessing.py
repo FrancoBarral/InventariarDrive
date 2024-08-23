@@ -47,7 +47,7 @@ def get_visibility(fileID,service,x):
                 send_email(
                     'File Visibility Changed',
                     x['owners'][0]['emailAddress'],
-                    f'The visibility of your file "{x['name']}" has been changed to private.'
+                    f'The visibility of your file "{x["name"]}" has been changed to private.'
                 )
             else:
                 print("Permission missing 'id':", permission)

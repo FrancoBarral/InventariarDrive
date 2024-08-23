@@ -83,4 +83,4 @@ def history_changes():
     return render_template('history.html', files=files)
 
 if __name__ == "__main__":
-    app.run(port=8080, debug=True)
+    app.run(port=5000)
