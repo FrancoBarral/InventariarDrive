@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventariar Drive</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-4">Historial de cambios</h1>
+        <p class="lead">Esta es una pagina que muestra el historial de cambios</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>name</th>
+                    <th>owner</th>
+                    <th>modifiedTime</th>
+                    <th>visibility</th>
+                    <th>mimeType</th>
+                    <th><form action="{{ url_for('drive') }}" method="get">
+                        <button type="submit" class="btn btn-primary">Drive</button>
+                    </form></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for file in files %}
+                    <tr>
+                        <td>{{ file.name }}</td>
+                        <td>{{ file.owner }}</td>
+                        <td>{{ file.modifiedTime }}</td>
+                        <td>{{ file.visibility }}</td>
+                        <td>{{ file.mimeType }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

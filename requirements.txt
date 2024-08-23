@@ -1,0 +1,11 @@
+flask
+google-api-python-client == 2.142.0
+google-auth 
+google-auth-httplib2
+googleapis-common-protos
+google-auth-oauthlib
+bootstrap-flask
+sib-api-v3-sdk
+python-dotenv
+request
+pytest
